@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Shally </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,9 +10,22 @@
       <ion-title size="large">Blank</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-list>
+    <ion-item>
+      <ion-select
+        interface="popover"
+        [(ngModel)]="selectedBasemap"
+        (ionChange)="changeBasemap()"
+        placeholder="Choose Basemap"
+      >
+        <ion-select-option value="streets">Streets</ion-select-option>
+        <ion-select-option value="terrain">Terrain</ion-select-option>
+        <ion-select-option value="satellite">Satellite</ion-select-option>
+        <ion-select-option value="topo-vector">Topo Vector</ion-select-option>
+        <ion-select-option value="gray-vector">Gray Vector</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <div id="container"></div>
 </ion-content>
